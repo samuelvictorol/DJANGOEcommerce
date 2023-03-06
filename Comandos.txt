@@ -10,4 +10,10 @@ django-admin startapp <nome do app> .
 
 python manage.py collectstatic
 
+python manage.py startapp <nome do app>
 
+python manage.py makemigrations
+
+python manage.py migrate
+
+python manage.py createsuperuser
