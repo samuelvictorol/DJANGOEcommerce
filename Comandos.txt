@@ -1,0 +1,13 @@
+- pip freeze 
+
+- python -m vev env -> activate : source env/Scripts/activate
+
+pip install django
+
+- python manage.py runserver
+
+django-admin startapp <nome do app> .
+
+python manage.py collectstatic
+
+
