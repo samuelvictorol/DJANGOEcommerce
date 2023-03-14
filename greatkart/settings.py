@@ -39,7 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'greatkart',
     'category',
-    'accounts'
+    'accounts',
+    'store'
 ]
 
 MIDDLEWARE = [
@@ -65,6 +66,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'category.context_processors.menu_links'
             ],
         },
     },
@@ -121,8 +123,8 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 STATIC_ROOT = BASE_DIR /'static'
-STATICFILES_DIR = [
-    'greatkart/static',
+STATICFILES_DIRS = [
+    'greatkart/static'
 ]
 
 MEDIA_URL = '/media/'
