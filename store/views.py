@@ -1,4 +1,5 @@
 from django.shortcuts import get_object_or_404, render
+from django.urls import reverse
 from category.models import Category
 from store.models import Product
 
@@ -33,5 +34,5 @@ def product_detail(request, category_slug, product_slug):
     context = {
         'single_product': single_product
     }
-    
+
     return render(request, 'store/product_detail.html', context)
