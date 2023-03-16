@@ -1,12 +1,8 @@
 {% load static %}
-<header class="section-header" 
-	style="background: #000000;  /* fallback for old browsers */
-	background: -webkit-linear-gradient(to bottom, #434343, #000000);  /* Chrome 10-25, Safari 5.1-6 */
-	background: linear-gradient(to bottom, #434343, #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-	"
+<header class="section-header bg-light" 
 
 >
-<nav  class="navbar p-md-0 navbar-expand-sm border-bottom">
+<nav  class="navbar p-md-0 navbar-expand-sm border-bottom border border-white">
 <div class="container">
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTop4" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -39,8 +35,8 @@
 	</div>
 	<div class="col-lg col-sm col-md col-6 flex-grow-0">
 		<div class="category-wrap dropdown d-inline-block float-right">
-			<button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown"> 
-				<i class="fa fa-bars"></i> All category 
+			<button type="button" class="btn btn-primary dropdown-toggle"  data-toggle="dropdown"> 
+				<i class="fa fa-bars" style="padding-right:.5vw"></i> All category 
 			</button>
 			<div class="dropdown-menu">
 				{% for category in links %}
@@ -53,10 +49,9 @@
 	<div class="col-lg  col-md-6 col-sm-12 col">
 		<form action="#" class="search">
 			<div class="input-group w-100">
-			    <input type="text" class="form-control" style="width:60%;" placeholder="Search">
-			    
+			    <input type="text" class="form-control shadow-none" style="width:60%; border:none;  border: 1.2px solid #1650E0;" placeholder="Search">
 			    <div class="input-group-append">
-			      <button class="btn btn-primary" type="submit">
+			      <button class="btn btn-outline-primary" type="submit">
 			        <i class="fa fa-search"></i>
 			      </button>
 			    </div>
@@ -65,15 +60,17 @@
 	</div> <!-- col.// -->
 	<div class="col-lg-3 col-sm-6 col-8 order-2 order-lg-3">
 				<div class="d-flex justify-content-end mb-3 mb-lg-0">
-					<div class="widget-header">
-						<small class="title text-muted">Welcome guest!</small>
+					<div class="widget-header rounded pl-sm-2 pr-sm-2"
+						style="background:#f2f2f2"	
+					>
+						<small class="title text-muted border-bottom border-light">Welcome guest!</small>
 						<div> 
-							<a href="./signin.html">Sign in</a> <span class="dark-transp"> | </span>
+							<a href="./signin.html" >Sign in</a> <span class="dark-transp "> | </span>
 							<a href="./register.html"> Register</a>
 						</div>
 					</div>
-					<a href="./cart.html" class="widget-header pl-3 ml-3">
-						<div class="icon icon-sm rounded-circle border"><i class="fa fa-shopping-cart"></i></div>
+					<a href="{% url 'cart' %}" class="widget-header pl-3 ml-3">
+						<div class="icon icon-sm rounded-circle" style="border: 2.2px solid #f2f2f2"><i class="fa fa-shopping-cart"></i></div>
 						<span class="badge badge-pill badge-danger notify">0</span>
 					</a>
 				</div> <!-- widgets-wrap.// -->
